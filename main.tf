@@ -4,7 +4,7 @@ provider "docker" {
 
 resource "docker_container" "HelloWorld" {
   image = "${docker_image.nginx.latest}"
-  name = "Hello"
+  name = "Hello-${count.index+1}"
   count = 2
   ports {
     internal = 80
