@@ -23,5 +23,5 @@ resource "docker_image" "mysql" {
 must_run = "true"
 
 output "db_address" {
-  value = "${docker_container.ip_address}"
+  value = "${docker_container.mysql.ip_address}"
 }
