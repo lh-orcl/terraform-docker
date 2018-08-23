@@ -15,11 +15,12 @@ resource "docker_container" "HelloDB" {
     read_only = true
   }
   must_run = "true"
-  output "db_address" {
-    value = "${docker_container.mysql.ip_address}"
-  }
 }
 
 resource "docker_image" "mysql" {
     name = "mysql:latest"
+}
+
+output "db_address" {
+  value = "${docker_container.container.ip_address}"
 }
