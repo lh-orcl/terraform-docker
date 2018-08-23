@@ -14,10 +14,9 @@ resource "docker_container" "HelloDB" {
     host_path = "${var.host_path}"
     read_only = false
   }
-  env
   must_run = "true"
   restart = "always"
-  "networks" = ["container_network"]
+  networks = ["container_network"]
 }
 
 resource "docker_image" "mysql" {
