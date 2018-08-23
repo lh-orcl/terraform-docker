@@ -12,7 +12,7 @@ resource "docker_container" "HelloDB" {
   volumes {
     container_path = "${var.container_path}"
     host_path = "${var.host_path}"
-    read_only = true
+    read_only = false
   }
   must_run = "true"
   restart = "always"
