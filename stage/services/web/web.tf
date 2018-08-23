@@ -4,14 +4,14 @@ provider "docker" {
 
 resource "docker_container" "HelloWorld" {
   image = "${docker_image.nginx.latest}"
-  name = "Hello-${count.index+1}"
-  count = 2
+  name = "web-${count.index+1}"
+  count = "${var.web_count}"
   ports {
-    internal = 80
+    internal = "${var.web_port}"
   }
   volumes {
-    container_path = "/usr/share/nginx/html"
-    host_path = "/var/www/nginx/terraform-docker/www"
+    container_path = "${var.container_path}"
+    host_path = "${var.host_path}"
     read_only = true
   }
 }
