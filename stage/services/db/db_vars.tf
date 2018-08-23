@@ -13,7 +13,7 @@ variable "db_count" {
   default = 1
 }
 
-variable "web_port" {
+variable "db_port" {
   description = "Exposed web port"
   default = 3306
 }
