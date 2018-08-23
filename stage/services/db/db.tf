@@ -16,6 +16,6 @@ resource "docker_container" "HelloDB" {
   }
 }
 
-resource "docker_image" "nginx" {
-    name = "nginx:latest"
+resource "docker_image" "mysql" {
+    name = "mysql:latest"
 }

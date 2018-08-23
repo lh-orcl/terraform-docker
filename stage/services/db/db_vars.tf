@@ -1,11 +1,11 @@
-variable "container_path" {
+variable "host_path" {
   description = "Path to web directory on Docker Host"
   default = "/var/www/nginx/terraform-docker/db"
 }
 
-variable "host_path" {
+variable "container_path" {
   description = "Web directory in web container"
-  default = "/var/www/nginx/terraform-docker/www"
+  default = "/var/www/lib/mysql"
 }
 
 variable "db_count" {
@@ -16,4 +16,18 @@ variable "db_count" {
 variable "web_port" {
   description = "Exposed web port"
   default = 3306
+}
+
+variable "db_user" {
+  description = "User our webs connect with"
+  default = "web"
+}
+
+variable "db_pass" {
+  description = "Password our webs connect with"
+}
+
+variable "db_net" {
+  description = "Allowed network access"
+  default = ""
 }

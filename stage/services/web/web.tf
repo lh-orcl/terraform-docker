@@ -2,7 +2,7 @@ provider "docker" {
 
 }
 
-resource "docker_container" "HelloWorld" {
+resource "docker_container" "HelloWeb" {
   image = "${docker_image.nginx.latest}"
   name = "web-${count.index+1}"
   count = "${var.web_count}"
