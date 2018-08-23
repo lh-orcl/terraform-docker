@@ -14,14 +14,12 @@ resource "docker_container" "HelloDB" {
     host_path = "${var.host_path}"
     read_only = true
   }
+  must_run = "true"
+  output "db_address" {
+    value = "${docker_container.mysql.ip_address}"
+  }
 }
 
 resource "docker_image" "mysql" {
     name = "mysql:latest"
-}
-
-must_run = "true"
-
-output "db_address" {
-  value = "${docker_container.mysql.ip_address}"
 }

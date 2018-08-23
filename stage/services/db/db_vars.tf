@@ -23,10 +23,6 @@ variable "db_user" {
   default = "web"
 }
 
-variable "db_pass" {
-  description = "Password our webs connect with"
-}
-
 variable "db_net" {
   description = "Allowed network access"
   default = ""
