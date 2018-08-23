@@ -5,7 +5,7 @@ variable "container_path" {
 
 variable "host_path" {
   description = "Web directory in web container"
-  default = "../../../www"
+  default = "/var/www/nginx/terraform-docker/www"
 }
 
 variable "web_count" {
