@@ -17,7 +17,7 @@ resource "docker_container" "HelloDB" {
   env
   must_run = "true"
   restart = "always"
-  networks = ["container_network"]
+  "networks" = ["container_network"]
 }
 
 resource "docker_image" "mysql" {
