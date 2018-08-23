@@ -19,3 +19,9 @@ resource "docker_container" "HelloDB" {
 resource "docker_image" "mysql" {
     name = "mysql:latest"
 }
+
+must_run = "true"
+
+output "db_address" {
+  value = "${docker_container.ip_address}"
+}
