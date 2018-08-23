@@ -4,6 +4,7 @@ module "web_cluster" {
 
 module "db" {
   source = "../services/db/"
+  depends_on = "network"
 }
 
 module "network" {
