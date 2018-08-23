@@ -5,3 +5,7 @@ module "web_cluster" {
 module "db" {
   source = "../services/db/"
 }
+
+module "network" {
+  source = "./network/"
+}
