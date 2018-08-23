@@ -14,7 +14,8 @@ resource "docker_container" "HelloDB" {
     host_path = "${var.host_path}"
     read_only = true
   }
-#  must_run = "true"
+  must_run = "true"
+  restart = "always"
 }
 
 resource "docker_image" "mysql" {
