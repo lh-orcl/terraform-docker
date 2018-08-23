@@ -15,7 +15,7 @@ resource "docker_container" "HelloDB" {
     read_only = false
   }
   must_run = "true"
-  restart = "always"
+#  restart = "always"
 }
 
 resource "docker_image" "mysql" {
