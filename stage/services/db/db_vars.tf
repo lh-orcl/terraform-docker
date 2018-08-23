@@ -25,5 +25,5 @@ variable "db_user" {
 
 variable "db_net" {
   description = "Allowed network access"
-  default = ""
+  default = "${docker_network.private_network.cluster_network}"
 }
