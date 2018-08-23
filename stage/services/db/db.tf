@@ -3,7 +3,6 @@ provider "docker" {
 }
 
 resource "docker_container" "HelloDB" {
-  depends_on = "network"
   image = "${docker_image.mysql.latest}"
   name = "db-${count.index+1}"
   count = "${var.db_count}"
