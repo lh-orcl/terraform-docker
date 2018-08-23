@@ -21,6 +21,6 @@ resource "docker_image" "mysql" {
     name = "mysql:latest"
 }
 
-output "db_address" {
-  value = "${docker_container.container.ip_address}"
-}
+#output "db_address" {
+#  value = "${docker_container.container.ip_address}"
+#}
